@@ -10,9 +10,9 @@ export class TrendingGatewayService {
 
   constructor(private service: TrendingService) {}
 
-  public getTrendingMovies(): Promise<TrendingMovie[]> {
+  public getTrendingMovies(page: number): Promise<TrendingMovie[]> {
     return new Promise((resolve, reject) => {
-      this.service.getTrendingMovies().subscribe(res => {
+      this.service.getTrendingMovies(page).subscribe(res => {
         resolve(res['results']);
       }, err => {
         reject(err);

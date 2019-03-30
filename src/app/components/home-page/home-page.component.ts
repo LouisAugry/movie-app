@@ -10,23 +10,38 @@ import { TrendingGatewayService } from '../../services/api-gateway';
 })
 export class HomePageComponent implements OnInit {
   public trendingMovies: TrendingMovie[];
+  public currentPage = 1;
 
-  constructor(private trendingGatewayService: TrendingGatewayService) { }
+  constructor(
+    private trendingGatewayService: TrendingGatewayService
+    ) { }
 
   ngOnInit() {
-    this.loadTrendingMovies();
+    this.loadTrendingMovies(this.currentPage);
   }
 
-  private async loadTrendingMovies() {
+  private async loadTrendingMovies(page: number) {
     try {
-      this.trendingMovies = await this.trendingGatewayService.getTrendingMovies();
+      this.trendingMovies = await this.trendingGatewayService.getTrendingMovies(page);
     } catch (error) {
       console.log(error);
     }
   }
 
-  public moreDetails(id: number) {
-    console.log(id);
+  public nextPage() {
+    this.currentPage += 1;
+    this.loadTrendingMovies(this.currentPage);
+    this.scrollToTop();
+  }
+
+  public previousPage() {
+    this.currentPage -= 1;
+    this.loadTrendingMovies(this.currentPage);
+    this.scrollToTop();
+  }
+
+  public scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
 }

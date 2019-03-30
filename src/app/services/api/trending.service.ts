@@ -8,13 +8,14 @@ import { environment } from '../../../environments/environment';
 @Injectable()
 export class TrendingService {
 
-  public getTrendingMovies(): Observable<any> {
+  constructor(private http: HttpClient) {  }
+
+  public getTrendingMovies(page): Observable<any> {
     const options = {
-      api_key: environment.apiKey
+      api_key: environment.apiKey,
+      page: page,
+      language: 'fr-FR'
     };
     return this.http.get(environment.apiUrl + '/trending/movie/week', {params: options});
   }
-
-  constructor(private http: HttpClient) {  }
-
 }

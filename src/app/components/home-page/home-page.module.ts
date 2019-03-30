@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatCardModule } from '@angular/material';
@@ -14,6 +15,7 @@ import { TrendingService } from '../../services/api';
   imports: [
     CommonModule,
     BrowserAnimationsModule,
+    RouterModule,
     HeaderModule,
 
     // Angular Material
