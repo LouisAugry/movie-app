@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { TrendingMovie } from '../../../app/models';
 import { TrendingGatewayService } from '../../services/api-gateway';
 
+import * as moment from 'moment';
+
 @Component({
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
@@ -38,6 +40,12 @@ export class HomePageComponent implements OnInit {
     this.currentPage -= 1;
     this.loadTrendingMovies(this.currentPage);
     this.scrollToTop();
+  }
+
+  public formatDate(date: string) {
+    return moment(date, 'YYYY-MM-DD').format('DD') + ' '
+           + moment(date, 'YYYY-MM-DD').locale('fr').format('MMMM') + ' '
+           + moment(date, 'YYYY-MM-DD').format('YYYY');
   }
 
   public scrollToTop() {
