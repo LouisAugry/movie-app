@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { MatCardModule } from '@angular/material';
+import { MatCardModule, MatChipsModule } from '@angular/material';
 
 import { HomePageComponent } from './home-page.component';
 import { HeaderModule } from '../common/header/header.module';
@@ -19,7 +19,8 @@ import { TrendingService } from '../../services/api';
     HeaderModule,
 
     // Angular Material
-    MatCardModule
+    MatCardModule,
+    MatChipsModule
   ],
   providers: [TrendingService, TrendingGatewayService]
 })

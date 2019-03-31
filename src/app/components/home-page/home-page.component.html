@@ -20,5 +20,7 @@
   </mat-card>
 </div>
 
-<button mat-button *ngIf="currentPage > 1" (click)="previousPage()">Page precedente</button>
-<button mat-button (click)="nextPage()">Page suivante</button>
+<mat-chip-list>
+  <mat-chip *ngIf="currentPage > 1" (click)="previousPage()"> < Précendant</mat-chip>
+  <mat-chip (click)="nextPage()">Suivant ></mat-chip>
+</mat-chip-list>
