@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 import { HeaderModule } from '../common/header/header.module';
 import { DetailMovieComponent } from './detail-movie.component';
@@ -10,6 +11,7 @@ import { MovieGatewayService } from '../../services/api-gateway';
   declarations: [DetailMovieComponent],
   imports: [
     CommonModule,
+    RouterModule,
     HeaderModule
   ],
   providers: [MovieService, MovieGatewayService]

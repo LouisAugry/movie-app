@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { DetailMovieComponent } from './components/detail-movie/detail-movie.component';
+import { DetailActorComponent } from './components/detail-actor/detail-actor.component';
 
 const routes: Routes = [
   {
@@ -12,6 +13,10 @@ const routes: Routes = [
   {
     path: 'detail/film',
     component: DetailMovieComponent
+  },
+  {
+    path: 'detail/acteur',
+    component: DetailActorComponent
   },
   {
     path: '**',

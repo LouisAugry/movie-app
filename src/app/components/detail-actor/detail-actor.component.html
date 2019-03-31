@@ -1,0 +1,5 @@
+<pre>{{ actor | json }}</pre>
+
+<ul *ngFor="let movie of actor?.movie_credits?.cast">
+  <a [routerLink]="['/detail/film']" [queryParams]="{id: movie.id}">{{ movie.title }}</a>
+</ul>

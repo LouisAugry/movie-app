@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomePageModule } from './components/home-page/home-page.module';
 import { DetailMovieModule } from './components/detail-movie/detail-movie.module';
+import { DetailActorModule } from './components/detail-actor/detail-actor.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { DetailMovieModule } from './components/detail-movie/detail-movie.module
     BrowserAnimationsModule,
     HttpClientModule,
     HomePageModule,
-    DetailMovieModule
+    DetailMovieModule,
+    DetailActorModule
   ],
   providers: [],
   bootstrap: [AppComponent]

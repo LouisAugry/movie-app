@@ -13,12 +13,12 @@ export class DetailMovieComponent implements OnInit {
   public movie: Movie;
 
   constructor(
-    private activatedRouter: ActivatedRoute,
+    private activatedRoute: ActivatedRoute,
     private movieServiceGateway: MovieGatewayService
   ) { }
 
   ngOnInit() {
-    this.loadMovie(this.activatedRouter.snapshot.queryParams['id']);
+    this.loadMovie(this.activatedRoute.snapshot.queryParams['id']);
   }
 
   private async loadMovie(id: number) {
