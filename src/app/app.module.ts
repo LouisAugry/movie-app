@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { HomePageModule } from './components/home-page/home-page.module';
 import { DetailMovieModule } from './components/detail-movie/detail-movie.module';
 import { DetailActorModule } from './components/detail-actor/detail-actor.module';
+import { DiscoverModule } from './components/discover/discover.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { DetailActorModule } from './components/detail-actor/detail-actor.module
     HttpClientModule,
     HomePageModule,
     DetailMovieModule,
-    DetailActorModule
+    DetailActorModule,
+    DiscoverModule
   ],
   providers: [],
   bootstrap: [AppComponent]

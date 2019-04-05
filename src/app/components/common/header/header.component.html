@@ -8,7 +8,11 @@
       <button mat-button>Accueil</button>
       <button mat-button>Voir tous les films</button>
       <button mat-button>Voir tous les acteurs</button>
-      <button mat-button>Découvrir un film</button>
+      <button mat-button [matMenuTriggerFor]="menu">Découvrir</button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item [routerLink]="['/decouvrir']" [queryParams]="{type: 'film'}">Des films</button>
+        <button mat-menu-item [routerLink]="['/decouvrir']" [queryParams]="{type: 'serie'}">Des séries</button>
+      </mat-menu>
 
   </mat-toolbar-row>
 

@@ -25,7 +25,7 @@ export class DetailMovieComponent implements OnInit {
     try {
       this.movie = await this.movieServiceGateway.getDetailMovie(id);
     } catch (error) {
-      console.log(error);
+      console.error(error);
     }
   }
 

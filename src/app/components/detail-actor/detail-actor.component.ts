@@ -25,7 +25,7 @@ export class DetailActorComponent implements OnInit {
     try {
       this.actor = await this.actorServiceGateway.getDetailActor(id);
     } catch (error) {
-      console.log(error);
+      console.error(error);
     }
   }
 

@@ -26,7 +26,7 @@ export class HomePageComponent implements OnInit {
     try {
       this.trendingMovies = await this.trendingGatewayService.getTrendingMovies(page);
     } catch (error) {
-      console.log(error);
+      console.error(error);
     }
   }
 

@@ -4,7 +4,7 @@
   cursor: pointer;
 }
 
-#card-container {
+#card-container .card-container {
   display: flex;
   flex-flow: row wrap;
   margin: 50px;
@@ -13,4 +13,3 @@
 h1 {
   text-align: center;
 }
-
