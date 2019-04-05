@@ -60,6 +60,12 @@ export class DiscoverComponent implements OnInit {
     this.scrollToTop();
   }
 
+  public firstPage() {
+    this.currentPage = 1;
+    this.loadDicoverData(this.currentPage);
+    this.scrollToTop();
+  }
+
   public formatDate(date: string) {
     return moment(date, 'YYYY-MM-DD').format('DD') + ' '
            + moment(date, 'YYYY-MM-DD').locale('fr').format('MMMM') + ' '

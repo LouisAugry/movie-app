@@ -42,6 +42,12 @@ export class HomePageComponent implements OnInit {
     this.scrollToTop();
   }
 
+  public firstPage() {
+    this.currentPage = 1;
+    this.loadTrendingMovies(this.currentPage);
+    this.scrollToTop();
+  }
+
   public formatDate(date: string) {
     return moment(date, 'YYYY-MM-DD').format('DD') + ' '
            + moment(date, 'YYYY-MM-DD').locale('fr').format('MMMM') + ' '

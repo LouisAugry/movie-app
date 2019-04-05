@@ -18,6 +18,7 @@
 </div>
 
 <mat-chip-list>
+  <mat-chip *ngIf="currentPage > 2" (click)="firstPage()"><<</mat-chip>
   <mat-chip *ngIf="currentPage > 1" (click)="previousPage()"> < Précedant</mat-chip>
   <mat-chip (click)="nextPage()">Suivant ></mat-chip>
 </mat-chip-list>
