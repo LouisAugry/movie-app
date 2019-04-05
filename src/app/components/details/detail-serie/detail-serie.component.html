@@ -1,0 +1,9 @@
+<app-header></app-header>
+
+<pre>{{ serie | json }}</pre>
+
+<ul>
+  <li *ngFor="let people of serie?.credits?.cast">
+    <a [routerLink]="['/detail/acteur']" [queryParams]="{id: people.id}">{{ people.name }}</a>
+  </li>
+</ul>

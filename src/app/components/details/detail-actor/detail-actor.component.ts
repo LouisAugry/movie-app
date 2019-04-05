@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-import { Actor } from '../../models';
-import { ActorGatewayService } from '../../services/api-gateway';
+import { Actor } from '../../../models';
+import { ActorGatewayService } from '../../../services/api-gateway';
 
 @Component({
   selector: 'app-detail-actor',
