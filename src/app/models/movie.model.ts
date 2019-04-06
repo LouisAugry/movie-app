@@ -4,12 +4,11 @@ export interface Movie {
   status: string;
   tagline: string;
   vote_average: number;
-  vote_count: number;
   runtime: number;
   release_date: string;
   poster_path: string;
   overview: string;
-  genre: MovieGenre[];
+  genres: MovieGenre[];
   videos: MovieVideos;
   credits: MovieCredits;
 }
